@@ -1,8 +1,25 @@
-import React from "react";
-import { FileText, Briefcase, GraduationCap } from "lucide-react";
+import React, { useState } from "react";
+import { FileText, Briefcase, GraduationCap, ChevronDown } from "lucide-react";
 import "./About.css";
 
 const About = () => {
+  const [showOptions, setShowOptions] = useState(false);
+
+  const handleDownload = (type) => {
+    const fileUrl =
+      type === "general"
+        ? "/files/general_resume.pdf"
+        : "/files/specialized_resume.pdf";
+
+    const link = document.createElement("a");
+    link.href = fileUrl;
+    link.download = fileUrl.split("/").pop();
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    setShowOptions(false); // hide dropdown
+  };
+
   return (
     <section id="about" className="about-section">
       <div className="container">
@@ -11,39 +28,48 @@ const About = () => {
         <div className="about-grid">
           <div className="about-text">
             <p className="paragraph">
-              Hello! I'm a passionate software developer with a strong focus on creating
-              beautiful, functional, and user-friendly applications. I enjoy solving 
-              complex problems and turning ideas into reality through code.
+              Hello! I'm a passionate software developer...
             </p>
             <p className="paragraph">
-              With several years of experience in web development, I specialize in React,
-              TypeScript, and modern frontend technologies. I'm constantly learning
-              and exploring new tools to improve my craft.
+              With several years of experience in web development...
             </p>
+
             <div className="button-group">
-              <button className="resume-button">
-                <FileText size={18} /> Download Resume
-              </button>
+              <div className="dropdown-wrapper">
+                <button
+                  className="resume-button"
+                  onClick={() => setShowOptions(!showOptions)}
+                >
+                  <FileText size={18} /> Download Resume <ChevronDown size={16} />
+                </button>
+
+                {showOptions && (
+                  <div className="dropdown-menu">
+                    <div className="dropdown-item" onClick={() => handleDownload("general")}>
+                      📄 General CV
+                    </div>
+                    <div className="dropdown-item" onClick={() => handleDownload("specialized")}>
+                      👨‍💻 Specialized CS CV
+                    </div>
+                  </div>
+                )}
+              </div>
             </div>
           </div>
+
+          {/* Cards Section */}
           <div className="about-cards">
-            <div className="info-card">
-              <div className="icon-container">
-                <Briefcase className="icon" />
-              </div>
-              <div>
-                <h3 className="card-title">Experience</h3>
-                <p>5+ years of professional experience in software development with a focus on web technologies</p>
-              </div>
-            </div>
+
+            {/* Education Card */}
             <div className="info-card">
               <div className="icon-container">
                 <GraduationCap className="icon" />
               </div>
               <div>
                 <h3 className="card-title">Education</h3>
-                <p>Bachelor's degree in Computer Science with specialization in software engineering</p>
+                <p>Bachelor's degree in Computer Science...</p>
               </div>
+  
             </div>
           </div>
         </div>
