@@ -1,19 +1,15 @@
 import React from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import './App.css';
-import Home from './components/home/Home.js';
-import Contact from './components/contact/Contact.js';
+import Index from './components/Index/Index';
 
 function App() {
   return (
-    <div className="App">
-      <BrowserRouter>
-        <Routes> 
-          <Route path="/" element={<Home />} />
-          <Route path="/contact" element={<Contact />} />  
-        </Routes>
-      </BrowserRouter>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Index />
+      </div>
+    </BrowserRouter>
   );
 }
 
