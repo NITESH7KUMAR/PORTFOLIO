@@ -36,14 +36,18 @@ textarea {
 }
 
 button {
-  padding: 12px;
-  background-color: #007bff;
+  padding: 12px 24px;
+  background-color: #7b2b44;
   border: none;
   color: white;
   border-radius: 6px;
   font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 button:disabled {

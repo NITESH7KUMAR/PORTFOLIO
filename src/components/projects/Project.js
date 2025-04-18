@@ -10,7 +10,7 @@ const Projects = () => {
       description:
         "A comprehensive dashboard for online store management with analytics, inventory tracking, and order processing.",
       tags: ["React", "Redux", "PHP"],
-      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
+      image: "/files/blood.png",
       demoLink: "https://acblood-line-camp.vercel.app/", // ✅ Fixed here
       githubLink: "https://github.com/NITESH7KUMAR/BloodLine-Camp",
     },
@@ -20,7 +20,7 @@ const Projects = () => {
       description:
         "A Kanban-style task management application with drag-and-drop functionality, team collaboration, and deadline tracking.",
       tags: ["Html", "CSS", "Node.js"],
-      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
+      image: "/files/arogaya.png",
       demoLink: "https://nitesh7kumar.github.io/Arogya-Website/",
       githubLink: "https://github.com/NITESH7KUMAR/Arogya-Website",
     },
@@ -30,7 +30,7 @@ const Projects = () => {
       description:
         "An application for tracking investment portfolios with real-time data visualization and performance analytics.",
       tags: ["Html", "JavaScript", "DSA"],
-      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
+      image: "/files/sudoku.png",
       demoLink: "https://nitesh7kumar.github.io/Sudoku/",
       githubLink: "https://github.com/NITESH7KUMAR/Sudoku",
     },
