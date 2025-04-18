@@ -28,7 +28,7 @@ const Home = () => {
             </Link>
 
             <Link to="contact" spy={true} smooth={true} offset={-70} duration={500}>
-              <Button size="lg" variant="outline" className="custom-btn outline">Contact Me</Button>
+              <Button size="lg" variant="outline" className="custom-btn ">Contact Me</Button>
             </Link>
           </div>
         </div>
