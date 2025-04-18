@@ -7,32 +7,27 @@ const Skills = () => {
     {
       category: "Frontend Development",
       icon: <Layout className="skill-icon" />,
-      items: ["React", "TypeScript", "Next.js", "HTML/CSS", "Tailwind CSS", "Redux"]
+      items: ["React", "JavaScript", "Next.js", "HTML/CSS", "Tailwind CSS", "Redux"]
     },
     {
       category: "Backend Development",
       icon: <Server className="skill-icon" />,
-      items: ["Node.js", "Express", "REST APIs", "GraphQL", "PostgreSQL", "MongoDB"]
-    },
-    {
-      category: "UI/UX Design",
-      icon: <PenTool className="skill-icon" />,
-      items: ["Figma", "Adobe XD", "Responsive Design", "Design Systems", "User Testing"]
+      items: ["Node.js", "Express", "REST APIs",  "PostgreSQL", "MongoDB"]
     },
     {
       category: "DevOps & Tools",
       icon: <Share2 className="skill-icon" />,
-      items: ["Git", "GitHub", "Docker", "CI/CD", "AWS", "Vercel"]
+      items: ["Git", "GitHub", "Docker", "CI/CD",  "Vercel"]
     },
     {
       category: "Programming Languages",
       icon: <Code className="skill-icon" />,
-      items: ["JavaScript", "TypeScript", "Python", "Java", "C#", "SQL"]
+      items: ["JavaScript",  "Java", "C++", "SQL"]
     },
     {
       category: "Database & Storage",
       icon: <Database className="skill-icon" />,
-      items: ["PostgreSQL", "MongoDB", "Firebase", "Redis", "MySQL", "S3"]
+      items: ["PostgreSQL", "MongoDB", "MySQL", ]
     }
   ];
 
