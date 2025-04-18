@@ -62,7 +62,7 @@
   align-items: center;
   gap: 0.5rem;
   padding: 0.75rem 1.25rem;
-  background-color: #2563eb;
+  background-color: #497406c5;
   color: #fff;
   font-weight: 500;
   font-size: 1rem;
@@ -73,7 +73,7 @@
 }
 
 .resume-button:hover {
-  background-color: #1d4ed8;
+  background-color: #0ba0d2;
 }
 
 .dropdown-wrapper {
