@@ -34,6 +34,17 @@ const Projects = () => {
       demoLink: "https://nitesh7kumar.github.io/Sudoku/",
       githubLink: "https://github.com/NITESH7KUMAR/Sudoku",
     },
+    {
+      id: 4,
+      title: "SpeakX",
+      description:
+        "An application for tracking investment portfolios with real-time data visualization and performance analytics.",
+      tags: ["Html", "JavaScript", "React","Redux"],
+      image: "/files/speaks.png",
+      demoLink: "https://project-speak-x.vercel.app/",
+      githubLink: "https://github.com/NITESH7KUMAR/Project-SpeakX",
+    },
+    
   ]);
 
   return (
