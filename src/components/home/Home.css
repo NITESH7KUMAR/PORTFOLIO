@@ -30,12 +30,12 @@
 }
 
 .highlight {
-  color: #3b82f6; /* Replace with your theme primary color */
+  color: #4a89f0f6; /* Replace with your theme primary color */
 }
 
 .hero-subtitle {
   font-size: 1.75rem;
-  color: #6b7280;
+  color: #545f73;
   margin-bottom: 2rem;
 }
 
@@ -48,7 +48,7 @@
 .hero-description {
   font-size: 1.125rem;
   max-width: 600px;
-  color: #6b7280;
+  color: #4a4f5a;
   margin-bottom: 2.5rem;
 }
 

@@ -1,6 +1,8 @@
+/* === About Section Styles === */
+
 .about-section {
   padding: 4rem 0;
-  background-color: #f5f5f5;
+  background-color: #f9fafb;
 }
 
 .container {
@@ -12,27 +14,29 @@
 .section-title {
   font-size: 2.5rem;
   text-align: center;
-  font-weight: bold;
+  font-weight: 700;
   margin-bottom: 0.5rem;
+  color: #1e293b;
 }
 
 .section-divider {
   width: 64px;
   height: 4px;
-  background-color: #007bff;
+  background-color: #2563eb;
   margin: 0 auto 2.5rem;
+  border-radius: 2px;
 }
 
 .about-grid {
   display: flex;
-  flex-direction: column;
+  flex-direction:column-reverse;
   gap: 2.5rem;
 }
 
 @media (min-width: 768px) {
   .about-grid {
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
   }
 }
 
@@ -42,8 +46,12 @@
 
 .paragraph {
   font-size: 1.1rem;
+  line-height: 1.7;
+  color: #334155;
   margin-bottom: 1.5rem;
 }
+
+/* === Resume Button & Dropdown === */
 
 .button-group {
   margin-top: 2rem;
@@ -54,56 +62,18 @@
   align-items: center;
   gap: 0.5rem;
   padding: 0.75rem 1.25rem;
-  background-color: #007bff;
+  background-color: #2563eb;
   color: #fff;
   font-weight: 500;
+  font-size: 1rem;
   border: none;
-  border-radius: 4px;
+  border-radius: 6px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .resume-button:hover {
-  background-color: #0056b3;
-}
-
-.about-cards {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.info-card {
-  display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-  padding: 1.5rem;
-  border-radius: 8px;
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.3s ease;
-}
-
-.info-card:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
-
-.icon-container {
-  padding: 0.75rem;
-  background-color: rgba(0, 123, 255, 0.1);
-  border-radius: 50%;
-}
-
-.icon {
-  width: 24px;
-  height: 24px;
-  color: #007bff;
-}
-
-.card-title {
-  font-size: 1.25rem;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
+  background-color: #1d4ed8;
 }
 
 .dropdown-wrapper {
@@ -114,22 +84,121 @@
   position: absolute;
   top: 100%;
   left: 0;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  z-index: 100;
-  margin-top: 6px;
-  width: 180px;
+  margin-top: 8px;
+  width: 200px;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  z-index: 10;
 }
 
 .dropdown-item {
-  padding: 10px 16px;
+  padding: 12px 16px;
   cursor: pointer;
-  color: #333;
-  transition: background 0.3s;
+  color: #334155;
+  font-size: 0.95rem;
+  transition: background 0.2s ease;
 }
 
 .dropdown-item:hover {
-  background-color: #f5f5f5;
+  background-color: #f1f5f9;
+}
+
+/* === Cards Section === */
+
+.about-cards {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+}
+
+.info-card {
+  display: flex;
+  align-items: flex-start;
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 1.8rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  gap: 1.5rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.info-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+}
+
+/* === Icon Styles === */
+
+.icon-container {
+  background-color: #dbeafe;
+  padding: 1rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  color: #2563eb;
+  width: 28px;
+  height: 28px;
+}
+
+/* === Text Styles Inside Card === */
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #1e293b;
+}
+
+/* === Education List === */
+
+.education-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.education-list li {
+  margin-bottom: 1.2rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #334155;
+}
+
+.education-list em {
+  display: block;
+  font-size: 0.9rem;
+  color: #64748b;
+  margin-top: 0.3rem;
+}
+/* Stack cards below text on small screens */
+@media (max-width: 767px) {
+  .about-grid {
+    flex-direction: column;
+  }
+
+  .education-card {
+    margin-top: 2rem;
+  }
+}
+
+/* Maintain side-by-side on large screens if needed */
+@media (min-width: 768px) {
+  .about-grid {
+    flex-direction: row;
+  }
+
+  .about-text {
+    flex: 1;
+  }
+
+  .education-card {
+    margin-top: 2rem;
+  }
 }

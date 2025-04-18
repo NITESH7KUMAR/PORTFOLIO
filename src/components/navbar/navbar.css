@@ -4,10 +4,10 @@
   top: 0;
   left: 0;
   right: 0;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(249, 251, 251, 0.388);
   backdrop-filter: blur(10px);
   z-index: 1000;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #141412;
 }
 
 .header-container {
@@ -22,6 +22,11 @@
 .logo {
   font-size: 24px;
   font-weight: bold;
+  color: #280a0a;
+  text-decoration:solid;
+  transition: color 0.5s;
+  cursor: pointer;
+
 }
 
 /* Desktop Navigation */
@@ -43,7 +48,7 @@
 
 /* Mobile Button */
 .menu-toggle {
-  background: red;
+  background: rgba(234, 160, 160, 0.17);
   padding: 8px;
   z-index: 1100; /* To keep above other content */
 }
@@ -84,7 +89,7 @@
 
 .nav-link-mobile {
   padding: 10px 0;
-  color: #444;
+  color: #040202;
   text-decoration: none;
   cursor: pointer;
   transition: color 0.3s;
