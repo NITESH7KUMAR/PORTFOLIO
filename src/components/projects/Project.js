@@ -16,13 +16,13 @@ const Projects = () => {
     },
     {
       id: 2,
-      title: "Arogaya Care",
+      title: "SpeakX",
       description:
-        "A Kanban-style task management application with drag-and-drop functionality, team collaboration, and deadline tracking.",
-      tags: ["Html", "CSS", "Node.js"],
-      image: "/files/arogaya.png",
-      demoLink: "https://nitesh7kumar.github.io/Arogya-Website/",
-      githubLink: "https://github.com/NITESH7KUMAR/Arogya-Website",
+        "An application for tracking investment portfolios with real-time data visualization and performance analytics.",
+      tags: ["Html", "JavaScript", "React","Redux"],
+      image: "/files/speaks.png",
+      demoLink: "https://project-speak-x.vercel.app/",
+      githubLink: "https://github.com/NITESH7KUMAR/Project-SpeakX",
     },
     {
       id: 3,
@@ -34,16 +34,7 @@ const Projects = () => {
       demoLink: "https://nitesh7kumar.github.io/Sudoku/",
       githubLink: "https://github.com/NITESH7KUMAR/Sudoku",
     },
-    {
-      id: 4,
-      title: "SpeakX",
-      description:
-        "An application for tracking investment portfolios with real-time data visualization and performance analytics.",
-      tags: ["Html", "JavaScript", "React","Redux"],
-      image: "/files/speaks.png",
-      demoLink: "https://project-speak-x.vercel.app/",
-      githubLink: "https://github.com/NITESH7KUMAR/Project-SpeakX",
-    },
+  
     
   ]);
 
