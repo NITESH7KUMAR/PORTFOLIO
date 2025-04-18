@@ -150,9 +150,10 @@
 /* === Text Styles Inside Card === */
 
 .card-title {
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   font-weight: 700;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
+  margin-top: -5px;
   color: #1e293b;
 }
 

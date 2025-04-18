@@ -74,7 +74,7 @@ const About = () => {
                 <GraduationCap className="icon" />
               </div>
               <div>
-                <h3 className="card-title">Education</h3>
+                <h1 className="card-title">Education</h1>
                 <ul className="education-list">
                   <li>
                     <strong>B.Tech in Computer Science and Engineering</strong>
