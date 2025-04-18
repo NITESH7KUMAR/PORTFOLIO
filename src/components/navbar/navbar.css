@@ -4,7 +4,7 @@
   top: 0;
   left: 0;
   right: 0;
-  background: rgba(249, 251, 251, 0.388);
+  background: rgba(251, 249, 249, 0.388);
   backdrop-filter: blur(10px);
   z-index: 1000;
   border-bottom: 1px solid #141412;
@@ -36,8 +36,9 @@
 
 .nav-link {
   margin-left: 24px;
+  font-weight: bolder;
   text-decoration: none;
-  color: #444;
+  color: #090808;
   transition: color 0.3s;
   cursor: pointer;
 }
