@@ -81,7 +81,7 @@ const About = () => {
                     <br />
                     Lovely Professional University (LPU), Punjab
                     <br />
-                    <em>CGPA: 7.8 | 2022 – Present</em>
+                    <em>CGPA: 7.9 | 2022 – Present</em>
                   </li>
                   <li>
                     <strong>Senior Secondary (Class 12th)</strong>

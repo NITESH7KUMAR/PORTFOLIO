@@ -3,40 +3,48 @@ import { Github, ArrowUpRight } from "lucide-react";
 import "./Project.css";
 
 const Projects = () => {
-  const [projects] = useState([
+  const [showAll, setShowAll] = useState(false);
+
+  const projects = [
     {
       id: 1,
-      title: "Blood Donation Website",
-      description:
-        "A comprehensive dashboard for online store management with analytics, inventory tracking, and order processing.",
-      tags: ["React", "Redux", "PHP"],
-      image: "/files/blood.png",
-      demoLink: "https://acblood-line-camp.vercel.app/", // ✅ Fixed here
-      githubLink: "https://github.com/NITESH7KUMAR/BloodLine-Camp",
+      title: "Salon Website",
+      description: "A full-stack salon booking platform with user authentication, admin dashboard, and appointment scheduling.",
+      tags: ["React", "Node.js", "Express.js", "MongoDB"],
+      image: "/files/xalon.png",
+      demoLink: "https://xalon.vercel.app/", 
+      githubLink: "https://github.com/NITESH7KUMAR/Xalon",
     },
     {
       id: 2,
+      title: "Blood Donation Website",
+      description: "A platform for donors and recipients to connect, request, and manage blood donations with PHP and MySQL backend.",
+      tags: ["React", "PHP", "MySQL"],
+      image: "/files/blood.png",
+      demoLink: "https://acblood-line-camp.vercel.app/", 
+      githubLink: "https://github.com/NITESH7KUMAR/BloodLine-Camp",
+    },
+    {
+      id: 3,
       title: "SpeakX",
-      description:
-        "An application for tracking investment portfolios with real-time data visualization and performance analytics.",
-      tags: ["Html", "JavaScript", "React","Redux"],
+      description: "A web application that fetches and displays data from a database using anagram-based search queries, allowing users to discover matches through intelligently scrambled input.",
+      tags: ["HTML", "JavaScript", "React","Mongodb"],
       image: "/files/speaks.png",
       demoLink: "https://project-speak-x.vercel.app/",
       githubLink: "https://github.com/NITESH7KUMAR/Project-SpeakX",
     },
     {
-      id: 3,
+      id: 4,
       title: "Sudoku Solver",
-      description:
-        "An application for tracking investment portfolios with real-time data visualization and performance analytics.",
-      tags: ["Html", "JavaScript", "DSA"],
+      description: "A web-based Sudoku game that uses backtracking algorithm to solve puzzles in real-time.",
+      tags: ["HTML", "CSS", "JavaScript", "DSA"],
       image: "/files/sudoku.png",
       demoLink: "https://nitesh7kumar.github.io/Sudoku/",
       githubLink: "https://github.com/NITESH7KUMAR/Sudoku",
     },
-  
-    
-  ]);
+  ];
+
+  const visibleProjects = showAll ? projects : projects.slice(0, 3);
 
   return (
     <section id="projects" className="projects-section">
@@ -44,7 +52,7 @@ const Projects = () => {
         <h2 className="projects-heading">My Projects</h2>
         <div className="heading-underline"></div>
         <div className="projects-grid">
-          {projects.map((project) => (
+          {visibleProjects.map((project) => (
             <div key={project.id} className="card">
               <div className="card-image">
                 <img src={project.image} alt={project.title} />
@@ -83,9 +91,13 @@ const Projects = () => {
             </div>
           ))}
         </div>
-        <div className="view-all">
-          <button className="button-outline-lg">View All Projects</button>
-        </div>
+        {!showAll && (
+          <div className="view-all">
+            <button className="button-outline-lg" onClick={() => setShowAll(true)}>
+              View All Projects
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );

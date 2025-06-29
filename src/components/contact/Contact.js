@@ -1,33 +1,48 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { Send } from "lucide-react";
+import emailjs from "@emailjs/browser";
 import "./Contact.css";
 
 const Contact = () => {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const formRef = useRef();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // simulate sending
-    setTimeout(() => {
-      alert("Message sent!");
-      setIsSubmitting(false);
-      setFormData({ name: "", email: "", message: "" });
-    }, 1000);
+    emailjs
+      .sendForm(
+        "service_4a9yfup",       // Replace with EmailJS service ID
+        "template_2tpurcj",      // Replace with EmailJS template ID
+        formRef.current,
+        "Tjre9B3vhQcw3mLQs"        // Replace with EmailJS public key
+      )
+      .then(
+        (result) => {
+          alert("Message sent successfully!");
+          setFormData({ name: "", email: "", message: "" });
+          setIsSubmitting(false);
+        },
+        (error) => {
+          alert("Something went wrong. Please try again.");
+          console.error(error);
+          setIsSubmitting(false);
+        }
+      );
   };
 
   return (
     <section id="contact" className="contact-section">
       <div className="container">
         <h2 className="section-title">Contact Me</h2>
-        <form className="contact-form" onSubmit={handleSubmit}>
+        <form ref={formRef} className="contact-form" onSubmit={handleSubmit}>
           <div className="form-group">
             <label htmlFor="name">Name</label>
             <input 

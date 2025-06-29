@@ -11,15 +11,15 @@ const Skills = () => {
         "React",
         "JavaScript",
         "Next.js",
-        "HTML/CSS",
-        "Tailwind CSS",
+        "HTML",
+        "CSS",
         "Redux",
       ],
     },
     {
       category: "Backend Development",
       icon: <Server className="skill-icon" />,
-      items: ["Node.js", "Express", "REST APIs", "PostgreSQL", "MongoDB"],
+      items: ["Node.js", "Express", "REST APIs", "MongoDB"],
     },
     {
       category: "DevOps & Tools",

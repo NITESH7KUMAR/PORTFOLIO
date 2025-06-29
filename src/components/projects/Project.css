@@ -1,3 +1,4 @@
+/* Section styling */
 .projects-section {
   padding: 64px 0;
   background-color: #f9f9f9;
@@ -23,29 +24,32 @@
   margin: 0 auto 40px auto;
 }
 
+/* Grid Layout */
 .projects-grid {
   display: grid;
   gap: 24px;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
+/* Card Styles */
 .card {
   background-color: #fff;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  transition: box-shadow 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 
 .card:hover {
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
 .card-image img {
   width: 100%;
   height: 200px;
   object-fit: cover;
-  transition: transform 0.5s ease;
+  transition: transform 0.4s ease;
 }
 
 .card-image:hover img {
@@ -57,8 +61,9 @@
 }
 
 .card-title {
-  font-size: 20px;
+  font-size: 22px;
   margin-bottom: 8px;
+  color: #1a1a1a;
 }
 
 .card-tags {
@@ -69,17 +74,21 @@
 
 .tag {
   font-size: 12px;
-  padding: 4px 8px;
-  background-color: #eee;
-  border-radius: 12px;
+  padding: 4px 10px;
+  background-color: #e0e0e0;
+  color: #333;
+  border-radius: 50px;
 }
 
+/* Card Content */
 .card-content {
   padding: 0 16px 16px 16px;
   font-size: 14px;
-  color: #444;
+  color: #555;
+  line-height: 1.5;
 }
 
+/* Card Footer with Buttons */
 .card-footer {
   padding: 16px;
   display: flex;
@@ -87,40 +96,42 @@
   align-items: center;
 }
 
+/* Button Styles */
 .button-outline,
 .button-filled {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 8px 12px;
+  padding: 8px 14px;
   font-size: 14px;
-  border: 1px solid #99b328;
-  text-decoration: none;
   border-radius: 6px;
   cursor: pointer;
   transition: all 0.3s ease;
+  text-decoration: none;
 }
 
 .button-outline {
+  border: 1px solid #007bff;
   background-color: transparent;
-  color: #ff0008;
+  color: #007bff;
 }
 
 .button-outline:hover {
-  background-color: #8ae0aa;
-  color: #120f0f;
+  background-color: #e6f0ff;
+  color: #0056b3;
 }
 
 .button-filled {
-  background-color: #053e20;
+  background-color: #007bff;
   color: #fff;
+  border: 1px solid transparent;
 }
 
 .button-filled:hover {
-  background-color: #1cc5e3;
-  color: #0a0d11;
+  background-color: #0056b3;
 }
 
+/* View All Button */
 .view-all {
   text-align: center;
   margin-top: 40px;
@@ -131,14 +142,13 @@
   font-size: 16px;
   background-color: transparent;
   color: #007bff;
-  border: 2px solid #090603;
+  border: 2px solid #007bff;
   border-radius: 8px;
   cursor: pointer;
-  transition: 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .button-outline-lg:hover {
-  background-color: #da7ee0;
-  color: rgb(8, 5, 5);
+  background-color: #007bff;
+  color: white;
 }
-
